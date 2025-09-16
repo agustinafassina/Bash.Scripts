@@ -6,3 +6,6 @@ This repository contains multiple Bash scripts designed to perform various tasks
 bash AccessToken.bash
 ```
 
+```
+bash Instructions.sh
+```
