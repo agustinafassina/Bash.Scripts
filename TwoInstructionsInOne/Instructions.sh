@@ -1,10 +1,9 @@
 #!/bin/bash
 #1- instruction
-#jupyter execute notebook.ipynb
 bash FirstInstruction.sh
 
 #2- instruction
-# Verificar si se ejecutó correctamente el index.sh
+# Check if FirstInstruction.sh was executed correctly
 if [ $? -eq 0 ]; then
     echo "2 - Instruction two"
 fi
