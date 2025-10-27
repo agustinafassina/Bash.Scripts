@@ -1,11 +1,11 @@
 #!/bin/bash
-#branchName= echo $(Build.SourceBranch)
-branchName="refs/heads/feature/AF-01"
+#branch_name= echo $(Build.SourceBranch)
+branch_name="refs/heads/feature/AF-01"
 
-echo $branchName
-if [ "$branchName" == "refs/heads/develop" ]; then
+echo $branch_name
+if [ "$branch_name" == "refs/heads/develop" ]; then
     sed -i 's/npm run build/npm run dev'/g Dockerfile
-elif [ "$branchName" == "refs/heads/feature/master" ]; then
+elif [ "$branch_name" == "refs/heads/feature/master" ]; then
     echo "It is ok :)"
 fi
 
