@@ -23,39 +23,39 @@ Bash.Scripts/
 ```
 
 ### Quick Start 🚀
-**Auth0 Access Token:** 🔐
+**Auth0 Access Token** 🔐
 ```bash
 cd Auth0
 # Edit the script with your Auth0 credentials first
 bash access-token.sh
 ```
 
-**Chained Instructions:** ⛓️
+**Chained Instructions** ⛓️
 ```bash
 cd two-instructions-in-one
 bash instructions.sh
 ```
 
-**Docker Vulnerability Scan (Trivy):** 🐳
+**Docker Vulnerability Scan (Trivy)** 🐳
 ```bash
 cd Docker-Vulnerabilities
 # Configure image_name and context_dir in the script
 bash Vulnerabilities.sh
 ```
 
-**MongoDB Backup to S3:** 💾
+**MongoDB Backup to S3** 💾
 ```bash
 cd EC2/backups
 bash mongo-backup.sh
 ```
 
-**Redis Backup to S3:** 💾
+**Redis Backup to S3** 💾
 ```bash
 cd EC2/backups
 bash redis-backup.sh
 ```
 
-**JSON to CSV:** 📊
+**JSON to CSV** 📊
 ```bash
 cd read-json-and-write-csv
 # Requires: data.json in the same directory
@@ -96,39 +96,39 @@ Bash.Scripts/
 ```
 
 ### Inicio Rapido 🚀
-**Token de acceso Auth0:** 🔐
+**Token de acceso Auth0** 🔐
 ```bash
 cd Auth0
 # Edita el script con tus credenciales de Auth0 primero
 bash access-token.sh
 ```
 
-**Instrucciones encadenadas:** ⛓️
+**Instrucciones encadenadas** ⛓️
 ```bash
 cd two-instructions-in-one
 bash instructions.sh
 ```
 
-**Escaneo de vulnerabilidades Docker (Trivy):** 🐳
+**Escaneo de vulnerabilidades Docker (Trivy)** 🐳
 ```bash
 cd Docker-Vulnerabilities
 # Configura image_name y context_dir en el script
 bash Vulnerabilities.sh
 ```
 
-**Backup de MongoDB a S3:** 💾
+**Backup de MongoDB a S3** 💾
 ```bash
 cd EC2/backups
 bash mongo-backup.sh
 ```
 
-**Backup de Redis a S3:** 💾
+**Backup de Redis a S3** 💾
 ```bash
 cd EC2/backups
 bash redis-backup.sh
 ```
 
-**JSON a CSV:** 📊
+**JSON a CSV** 📊
 ```bash
 cd read-json-and-write-csv
 # Requiere: data.json en el mismo directorio
