@@ -7,6 +7,8 @@ This repository contains a curated collection of Bash scripts designed to automa
 ### Project Structure 📁
 ```
 Bash.Scripts/
+├── Health-Check/             # API/service health monitoring
+│   └── health-check.sh       # Ping endpoints and report status
 ├── Auth0/                    # Auth0 API integration
 │   └── access-token.sh       # Client credentials flow for Auth0 tokens
 ├── Docker-Vulnerabilities/   # Security scanning
@@ -23,6 +25,14 @@ Bash.Scripts/
 ```
 
 ### Quick Start 🚀
+**Health Check** 🏥
+```bash
+cd Health-Check
+# Edit ENDPOINTS in the script or pass URLs as arguments
+bash health-check.sh
+# Or: bash health-check.sh https://api.example.com https://app.example.com
+```
+
 **Auth0 Access Token** 🔐
 ```bash
 cd Auth0
@@ -65,6 +75,7 @@ bash create-csv.sh
 ### Requirements 📦
 | Script | Dependencies |
 |--------|--------------|
+| Health-Check | `curl` |
 | Auth0 | `curl` |
 | Docker-Vulnerabilities | Docker, Trivy |
 | EC2 backups | AWS CLI, `mongodump` (Mongo) / Redis |
@@ -80,6 +91,8 @@ Este repositorio contiene una coleccion de scripts Bash diseñados para automati
 ### Estructura del Proyecto 📁
 ```
 Bash.Scripts/
+├── Health-Check/             # Monitoreo de APIs/servicios
+│   └── health-check.sh       # Ping a endpoints y reporte de estado
 ├── Auth0/                    # Integracion con Auth0
 │   └── access-token.sh       # Flujo client credentials para tokens Auth0
 ├── Docker-Vulnerabilities/   # Escaneo de seguridad
@@ -96,6 +109,14 @@ Bash.Scripts/
 ```
 
 ### Inicio Rapido 🚀
+**Health Check** 🏥
+```bash
+cd Health-Check
+# Edita ENDPOINTS en el script o pasa URLs como argumentos
+bash health-check.sh
+# O: bash health-check.sh https://api.example.com https://app.example.com
+```
+
 **Token de acceso Auth0** 🔐
 ```bash
 cd Auth0
@@ -138,6 +159,7 @@ bash create-csv.sh
 ### Requisitos 📦
 | Script | Dependencias |
 |--------|--------------|
+| Health-Check | `curl` |
 | Auth0 | `curl` |
 | Docker-Vulnerabilities | Docker, Trivy |
 | Backups EC2 | AWS CLI, `mongodump` (Mongo) / Redis |
