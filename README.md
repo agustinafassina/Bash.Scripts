@@ -1,4 +1,4 @@
-# Bash Scripts 🐚
+# Bash Scripts ⚙️
 A collection of Bash scripts for automation, API integration, backups, and DevOps tasks.
 
 ### Overview 📋
