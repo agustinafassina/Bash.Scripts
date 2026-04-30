@@ -9,6 +9,10 @@ This repository contains a curated collection of Bash scripts designed to automa
 Bash.Scripts/
 ├── Health-Check/             # API/service health monitoring
 │   └── health-check.sh       # Ping endpoints and report status
+├── S3-Cleanup/               # S3 bucket cleanup
+│   └── s3-cleanup.sh         # Delete objects older than X days
+├── Log-Rotation/             # Log retention and compression
+│   └── log-rotation.sh       # Gzip old logs, delete past retention
 ├── Auth0/                    # Auth0 API integration
 │   └── access-token.sh       # Client credentials flow for Auth0 tokens
 ├── Docker-Vulnerabilities/   # Security scanning
@@ -31,6 +35,21 @@ cd Health-Check
 # Edit ENDPOINTS in the script or pass URLs as arguments
 bash health-check.sh
 # Or: bash health-check.sh https://api.example.com https://app.example.com
+```
+
+**S3 Cleanup** 🗑️
+```bash
+cd S3-Cleanup
+bash s3-cleanup.sh my-bucket backups/ 30
+bash s3-cleanup.sh --execute my-bucket backups/ 30
+```
+
+**Log rotation** 📜
+```bash
+cd Log-Rotation
+# Edit LOG_DIR, GLOB, DELETE_GLOB, COMPRESS_AFTER_DAYS, DELETE_AFTER_DAYS
+bash log-rotation.sh /var/log/myapp 30 7
+bash log-rotation.sh --execute /var/log/myapp 30 7
 ```
 
 **Auth0 Access Token** 🔐
@@ -76,6 +95,8 @@ bash create-csv.sh
 | Script | Dependencies |
 |--------|--------------|
 | Health-Check | `curl` |
+| S3-Cleanup | AWS CLI, `jq` |
+| Log-Rotation | `gzip`, `find` |
 | Auth0 | `curl` |
 | Docker-Vulnerabilities | Docker, Trivy |
 | EC2 backups | AWS CLI, `mongodump` (Mongo) / Redis |
@@ -93,6 +114,10 @@ Este repositorio contiene una coleccion de scripts Bash diseñados para automati
 Bash.Scripts/
 ├── Health-Check/             # Monitoreo de APIs/servicios
 │   └── health-check.sh       # Ping a endpoints y reporte de estado
+├── S3-Cleanup/               # Limpieza de buckets S3
+│   └── s3-cleanup.sh         # Eliminar objetos mas antiguos que X dias
+├── Log-Rotation/             # Retencion y compresion de logs
+│   └── log-rotation.sh       # Gzip a logs viejos, borrar segun retencion
 ├── Auth0/                    # Integracion con Auth0
 │   └── access-token.sh       # Flujo client credentials para tokens Auth0
 ├── Docker-Vulnerabilities/   # Escaneo de seguridad
@@ -115,6 +140,21 @@ cd Health-Check
 # Edita ENDPOINTS en el script o pasa URLs como argumentos
 bash health-check.sh
 # O: bash health-check.sh https://api.example.com https://app.example.com
+```
+
+**S3 Cleanup** 🗑️
+```bash
+cd S3-Cleanup
+bash s3-cleanup.sh mi-bucket backups/ 30
+bash s3-cleanup.sh --execute mi-bucket backups/ 30
+```
+
+**Rotacion de logs** 📜
+```bash
+cd Log-Rotation
+# Edita LOG_DIR, GLOB, DELETE_GLOB, COMPRESS_AFTER_DAYS, DELETE_AFTER_DAYS
+bash log-rotation.sh /var/log/miapp 30 7
+bash log-rotation.sh --execute /var/log/miapp 30 7
 ```
 
 **Token de acceso Auth0** 🔐
@@ -160,6 +200,8 @@ bash create-csv.sh
 | Script | Dependencias |
 |--------|--------------|
 | Health-Check | `curl` |
+| S3-Cleanup | AWS CLI, `jq` |
+| Log-Rotation | `gzip`, `find` |
 | Auth0 | `curl` |
 | Docker-Vulnerabilities | Docker, Trivy |
 | Backups EC2 | AWS CLI, `mongodump` (Mongo) / Redis |
