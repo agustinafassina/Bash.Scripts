@@ -103,7 +103,7 @@ bash create-csv.sh
 | read-json-and-write-csv | `jq` |
 
 ### License 📄
-MIT
+By Agustina Fassina
 
 ## Español 🇪🇸
 ### Descripcion 📝
@@ -208,4 +208,4 @@ bash create-csv.sh
 | read-json-and-write-csv | `jq` |
 
 ### Licencia 📄
-MIT
+Por Agustina Fassina
