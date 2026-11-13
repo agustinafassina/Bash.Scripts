@@ -1,0 +1,12 @@
+{
+  "findingStatus": [
+    { "comparison": "EQUALS", "value": "ACTIVE" }
+  ],
+  "severity": [
+    { "comparison": "EQUALS", "value": "CRITICAL" },
+    { "comparison": "EQUALS", "value": "HIGH" }
+  ],
+  "findingType": [
+    { "comparison": "EQUALS", "value": "PACKAGE_VULNERABILITY" }
+  ]
+}
